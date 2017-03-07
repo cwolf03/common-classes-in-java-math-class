@@ -1,5 +1,8 @@
 package com.theironyard;
 
+import static java.lang.Math.PI;
+import static java.lang.Math.pow;
+
 /**
  * This is a utility class that will calculate and return the volume of 3D
  * shapes using the Math class. Your job is to create and implement static
@@ -34,7 +37,10 @@ public class Volume {
      * @return The volume of a cube.
      */
     // todo: create the cube() method as described above
-
+    public static double cube(double length){
+        double volumeCube = pow(length, 3);
+        return volumeCube;
+    }
 
     /**
      * Create a method named cone(). This method should be static and publicly
@@ -57,7 +63,10 @@ public class Volume {
      * @return The volume of the cone
      */
     // todo: create the cone() method as described above
-
+    public static double cone(double radius, double height){
+        double volumeCone = (PI * pow(radius, 2)) * (height / 3);
+        return volumeCone;
+    }
 
     /**
      * Create a method named sphere(). This method should be static and publicly
@@ -79,6 +88,9 @@ public class Volume {
      * @return
      */
     // todo: create a method to calculate the area of a sphere
-
+    public static double sphere(double radius){
+        double volumeSphere = (4.0 / 3.0) * PI * pow(radius, 3);
+        return volumeSphere;
+    }
 
 }
